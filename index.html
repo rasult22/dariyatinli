@@ -80,7 +80,73 @@
                 <audio src="./audio/13第二十六课 梁山伯与祝英台.mp3" preload="none" controls></audio>
         </div>
     </div>
-
+    <div class="motivation-container">
+        <div class="motivation">
+            <i class="motivation-quote animated flipInY">"Я люблю мандарины"</i>
+            <h3 class="motivation-author animated flipInY" style="margin-left:85px;">Данчик</h3>
+        </div>
+    </div>
 </body>
+<script>
+    window.onload = function(){
+        let quotes = [
+            {
+                author: 'Уинстон Черчилль',
+                quote: '«Успех — это способность терпеть поражение за поражением без потери энтузиазма»'
+            },
+            {
+                author: 'Джимми Дин',
+                quote: '«Я не могу изменить направление ветра, но могу развернуть паруса так, что всегда доберусь туда, куда мне нужно»'
+            },
+            {
+                author: 'Томас Эдисон.',
+                quote: '«Я не потерпел неудачу. Я просто нашёл 10 тыс. вариантов, которые не работают»'
+            },
+            {
+                author: 'Stephen Covey',
+                quote: '"I am not a product of my circumstances. I am a product of my decisions.'
+            },
+            {
+                author: 'Брюс Ли',
+                quote: '«Дисциплина это не ограничение свободы. Это отсечение всего лишнего»'
+            },
+            {
+                author: 'Данчик',
+                quote: '"Я люблю мандаринчикиии"'
+            },
+            {
+                author: 'Kaizen',
+                quote: '"Там, где нет проблем - совершенствование невозможно."'
+            },
+            {
+                author: 'Нассим Талеб',
+                quote: '"То чего вы не знаете, гораздо важнее того, что вы знаете."'
+            },
+            {
+                author: '@umma.ru',
+                quote: '"Кто прикладывает усилия пред Богом, тем людям Всевышний откроет благословенные пути достижения всестороннего успехах в мирском и вечном."'
+            },
+        ]
+        console.log(quotes);
+        randomQuote(quotes);
 
+        document.querySelector('.motivation-container').onclick = function(){randomQuote(quotes);
+        }
+        
+    }
+
+
+    function randomQuote(quotes){
+        let motivationQuote = document.querySelector('.motivation-quote');
+        let motivationAuthor = document.querySelector('.motivation-author');
+        
+        let rand = Math.floor(Math.random() * quotes.length);
+        let quote = quotes[rand].quote;
+        let author = quotes[rand].author;
+
+        motivationAuthor.innerHTML = author;
+        motivationQuote.innerHTML = quote;
+
+    }
+</script>
 </html>

@@ -18,3 +18,23 @@ html{
     /* margin-right: 20px; */
 
 }
+.motivation-container{
+    position: relative;
+}
+.motivation{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 15px;
+    bottom: 0;
+    background: khaki;
+    left:0;
+}
+.motivation-quote{
+    font-size: 15px;
+}
+.motivation-author{
+    font-size: 16px;
+}
